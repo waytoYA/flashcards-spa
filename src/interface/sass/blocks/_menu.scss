@@ -78,6 +78,8 @@
 }
 .table__row--delete{
     width: 50px;
+    min-width: 50px;
+    height: 50px;
 
     border-radius: $main-radius;
     background-color: $main-red-4;
@@ -97,5 +99,30 @@
 
     &:hover{
         background-color: rgba(77, 138, 228, 0.05);
+    }
+}
+
+@media (max-width: 800px) {
+    .table__row--input {
+        width: 150px;
+    }
+    .table__row--word{
+        width: 150px;
+    }
+}
+
+@media (max-width: 600px) {
+    .table__row--number {
+        width: 10px;
+    }
+}
+@media (max-width: 500px) {
+    .table__row__block {
+        & + & {
+            margin-left: 8px;
+        }
+    }
+    .menu__block--title{
+        font-size: 18px;
     }
 }

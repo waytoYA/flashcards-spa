@@ -1,4 +1,3 @@
-import { observer } from 'mobx-react-lite';
 import React, { FC, useEffect, useState, useContext} from 'react';
 import { Cards } from '..';
 import { ICard } from './Menu';
