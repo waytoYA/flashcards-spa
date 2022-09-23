@@ -1,0 +1,101 @@
+.menu{
+    padding: 0 $main-padding;
+}
+.menu__block{
+    width: max-content;
+
+    margin-bottom: 25px;
+}
+.menu__block--title{
+    font-size: 24px;
+    margin-bottom: 25px;
+
+    span{
+        color: $main-blue;
+        font-weight: bold;
+    }
+
+    h3 {
+        display: inline-block;
+        margin-left: 10px;
+    }
+}
+.menu__block--table{
+    display: flex;
+    flex-direction: column;
+
+}
+.table__row{
+    display: flex;
+    height: 50px;
+    
+    font-size: 17px;
+    transition: transform 0.5s;
+
+    &:first-child{
+        font-size: 20px;
+    }
+
+    & + & {
+        margin-top: 10px;
+    }
+}
+.table__row--inactive{
+    transform: translateX(-800px);
+}
+.table__row__block{
+    width: 120px;
+    
+    line-height: 50px;
+    text-align: center;
+    
+    & + & {
+        margin-left: 25px;
+    }
+}
+.table__row--input{
+    width: 250px; 
+
+    padding: 4px;
+    border: 1px solid rgba(77, 137, 228, 0.2);
+    border-radius: $main-radius;
+    box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.1);
+
+    &:hover{
+        border: 1px solid rgba(77, 137, 228, 0.5);
+    }
+
+    &:focus{
+        border: 1px solid rgba(77, 137, 228, 0.5);
+    }
+}
+
+.table__row--number{
+
+}
+.table__row--word{
+    width: 250px;  // for inputs
+}
+.table__row--delete{
+    width: 50px;
+
+    border-radius: $main-radius;
+    background-color: $main-red-4;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $main-red;
+    }
+
+}
+
+.menu__block--button{
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: $main-radius;
+    border: 2px solid $main-blue;
+
+    &:hover{
+        background-color: rgba(77, 138, 228, 0.05);
+    }
+}

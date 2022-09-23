@@ -1,0 +1,36 @@
+%button {
+    height: 50px;
+
+    color: #fff;
+    padding: 5px 17px;
+    border-radius: $main-radius;
+
+    &:hover{
+        box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
+    }
+}
+.saveButton{
+    @extend %button;
+
+    font-size: 14px;
+    margin-left: 30px;
+    background-color: $main-green-8;
+
+    &:hover{
+        background-color: $main-green;
+    }
+}
+.loadButton{
+    @extend %button;
+
+    line-height: calc(50px - 10px); // учитваем padding
+    cursor: pointer;
+    background-color: $main-blue-8;
+
+    &:hover{
+        background-color: $main-blue;
+    }
+}
+.loadButton--hidden{
+    display: none;
+}

@@ -1,0 +1,17 @@
+.results{
+    padding: 0 4%;
+}
+
+.table__row__results{
+    width: 250px;
+    border-radius: $main-radius;
+    font-weight: 300;
+}
+
+.table__row__results--no{
+    background-color: $main-red-4;
+}
+
+.table__row__results--yes{
+    background-color: $main-green-4;
+}

@@ -1,0 +1,15 @@
+.header{
+    width: 100%;
+    height: 70px;
+    background-color: $main-blue;
+    padding: 0 $main-padding;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.header__name {
+    font-size: 22px;
+    color: $white;
+    font-weight: bold;
+}
