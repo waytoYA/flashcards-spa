@@ -45,11 +45,13 @@ const TableRow: FC<ICard> = ({index, id, word, wordTranslated, pos, setCheckRow}
 
             <input 
                 className='table__row__block table__row--input'
+                maxLength={38}
                 value={wordv || ''}
                 onChange={(e) => setWordv(e.target.value)}
             />
             <input 
                 className='table__row__block table__row--input'
+                maxLength={34}
                 value={wordvTranslated || ''}
                 onChange={(e) => setWordvTranslated(e.target.value)}
             />

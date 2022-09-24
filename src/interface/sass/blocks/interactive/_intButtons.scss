@@ -1,0 +1,55 @@
+.interative__btn--no{
+    p {
+        color: $main-red;
+    }        
+
+}
+.interative__btn__icon--no{
+    width: 200px;
+    height: 200px;
+
+    background-color: $main-red-8;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: all 0.3s;
+
+    &:hover{
+        background-color: $main-red;
+        transform: scale(110%);
+    }
+}
+
+.interative__btn--yes{
+    p {
+        color: $main-green;
+    }    
+}
+
+.interative__btn__icon--yes{
+    width: 200px;
+    height: 200px;
+
+    background-color: $main-green-8;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: all 0.3s;
+
+    &:hover{
+        background-color: $main-green;
+        transform: scale(110%);
+    }
+}
+
+
+@media (max-width: 1200px){
+    .interative__btn__icon--no{
+        width: 100px;
+        height: 100px;
+    }
+    .interative__btn__icon--yes{
+        width: 100px;
+        height: 100px;
+    }
+}

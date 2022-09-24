@@ -61,6 +61,16 @@ img {
   font-weight: bold;
 }
 
+.github {
+  position: absolute;
+  right: 30px;
+}
+
+.github__logo {
+  width: 40px;
+  height: 40px;
+}
+
 .menu {
   padding: 0 4%;
 }
@@ -245,124 +255,6 @@ img {
           transform: scale(135%);
 }
 
-.interactive {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  margin-top: 70px;
-}
-
-.interative__btn {
-  width: 25%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0 50px;
-}
-
-.interative__btn svg {
-  width: 200px;
-  height: 200px;
-  padding: 70px;
-}
-
-.interative__btn p {
-  font-size: 26px;
-  margin-top: 5px;
-  text-align: center;
-}
-
-.interative__btn:last-child {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.interative__btn--no p {
-  color: #fc6c6c;
-}
-
-.interative__btn__icon--no {
-  width: 200px;
-  height: 200px;
-  background-color: rgba(252, 108, 108, 0.8);
-  border-radius: 50%;
-  cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.interative__btn__icon--no:hover {
-  background-color: #fc6c6c;
-  -webkit-transform: scale(110%);
-          transform: scale(110%);
-}
-
-.interative__card {
-  width: 700px;
-  height: 700px;
-  border-radius: 50%;
-  -webkit-box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.3);
-}
-
-.interative__btn--yes p {
-  color: #7AE977;
-}
-
-.interative__btn__icon--yes {
-  width: 200px;
-  height: 200px;
-  background-color: rgba(122, 233, 119, 0.8);
-  border-radius: 50%;
-  cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.interative__btn__icon--yes:hover {
-  background-color: #7AE977;
-  -webkit-transform: scale(110%);
-          transform: scale(110%);
-}
-
-.interactive__card--word {
-  height: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 68px;
-  font-weight: bold;
-  word-break: break-all;
-  padding: 0 25px;
-}
-
-.interactive__card--wordTranslate {
-  font-size: 16px;
-  opacity: 0.5;
-  text-align: center;
-}
-
 .results {
   padding: 0 4%;
 }
@@ -415,5 +307,184 @@ img {
 
 .loadButton--hidden {
   display: none;
+}
+
+.interactive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 70px;
+}
+
+.interative__btn {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 50px;
+}
+
+.interative__btn svg {
+  width: 200px;
+  height: 200px;
+  padding: 70px;
+}
+
+.interative__btn p {
+  font-size: 26px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.interative__btn:last-child {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (max-width: 1200px) {
+  .interative__btn svg {
+    width: 100px;
+    height: 100px;
+    padding: 35px;
+  }
+  .interative__btn p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  .interactive {
+    padding: 0 4%;
+  }
+  .interative__btn {
+    display: none;
+  }
+}
+
+.interative__btn--no p {
+  color: #fc6c6c;
+}
+
+.interative__btn__icon--no {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(252, 108, 108, 0.8);
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.interative__btn__icon--no:hover {
+  background-color: #fc6c6c;
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
+}
+
+.interative__btn--yes p {
+  color: #7AE977;
+}
+
+.interative__btn__icon--yes {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(122, 233, 119, 0.8);
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.interative__btn__icon--yes:hover {
+  background-color: #7AE977;
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
+}
+
+@media (max-width: 1200px) {
+  .interative__btn__icon--no {
+    width: 100px;
+    height: 100px;
+  }
+  .interative__btn__icon--yes {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.interative__card {
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.3s, opacity 1.3s;
+  transition: all 0.3s, opacity 1.3s;
+}
+
+.interative__card--animate--yes {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  color: #7AE977;
+  opacity: 0;
+}
+
+.interative__card--animate--no {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  color: #fc6c6c;
+  opacity: 0;
+}
+
+.interactive__card--word {
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 68px;
+  text-align: center;
+  font-weight: bold;
+  word-break: break-all;
+  padding: 0 25px;
+}
+
+.interactive__card--wordTranslate {
+  font-size: 16px;
+  opacity: 0.5;
+  text-align: center;
+}
+
+@media (max-width: 1400px) {
+  .interative__card {
+    border-radius: 25px;
+  }
+}
+
+@media (max-width: 800px) {
+  .interative__card {
+    width: 100%;
+    height: calc(100vh - 210px);
+  }
 }
 /*# sourceMappingURL=main.css.map */

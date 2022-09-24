@@ -22,6 +22,23 @@ const App = () => {
   // Запускаем результаты
   const [goresult, setGoresult] = useState(false)
 
+  const validation = () => {
+    const allWords = FlashCards.words
+
+    let notEmpty = false
+    
+    for (let one of allWords) {
+
+      if (one.word && one.wordTranslated) notEmpty = true
+
+      if (!one.word && !one.wordTranslated && FlashCards.words.length > 1)
+        FlashCards.setWords(FlashCards.words.filter((word: {id: number}) => word.id != one.id))
+        
+    }
+
+    return notEmpty
+  }
+
   const start = () => {
     setPos(true)
   }
@@ -29,6 +46,10 @@ const App = () => {
   useEffect(() => {
 
     if (pos === false) return;
+    if (!validation()) {
+      setPos(false);
+      return;
+    };
     setGostart(true)
 
   }, [pos])

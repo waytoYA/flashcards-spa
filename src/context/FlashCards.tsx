@@ -5,12 +5,18 @@ class FlashCards {
 
     constructor(){
         this._words = [
-            {word: undefined, wordTranslated: undefined, id: 1, result: false},
-            {word: undefined, wordTranslated: undefined, id: 2, result: false},
-            {word: undefined, wordTranslated: undefined, id: 3, result: false},
-            // {word: 'perform', wordTranslated: 'выполнять', id: 1, result: false},
-            // {word: 'car', wordTranslated: 'м', id: 2, result: false},
-            // {word: 'subnaticontarion on the pieace', wordTranslated: 'машина на неоновом двигателе', id: 3, result: false},
+            // {word: undefined, wordTranslated: undefined, id: 1, result: false},
+            // {word: undefined, wordTranslated: undefined, id: 2, result: false},
+            // {word: undefined, wordTranslated: undefined, id: 3, result: false},
+            {word: 'perform', wordTranslated: 'выполнять', id: 1, result: false},
+            {word: 'car', wordTranslated: 'м', id: 2, result: false},
+            {word: 'subnaticontarion on the pieace', wordTranslated: 'машина на неоновом двигателе', id: 3, result: false},
+            {word: 'perform', wordTranslated: 'выполнять', id: 4, result: false},
+            {word: 'car', wordTranslated: 'м', id: 5, result: false},
+            {word: 'subnaticontarion on the pieace', wordTranslated: 'машина на неоновом двигателе', id: 6, result: false},
+            {word: 'perform', wordTranslated: 'выполнять', id: 7, result: false},
+            {word: 'car', wordTranslated: 'м', id: 8, result: false},
+            {word: 'subnaticontarion on the pieace', wordTranslated: 'машина на неоновом двигателе', id: 9, result: false},
         ]
 
         this._start = false

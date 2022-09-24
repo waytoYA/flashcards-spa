@@ -1,0 +1,53 @@
+.interative__card{
+    width: 700px;
+    height: 700px;
+
+    border-radius: 50%;
+    box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s, opacity 1.3s;
+}
+
+.interative__card--animate--yes{
+    transform: rotate(5deg);
+    color: $main-green;
+    opacity: 0;
+}
+.interative__card--animate--no{
+    transform: rotate(-5deg);
+    color: $main-red;
+    opacity: 0;
+}
+
+.interactive__card--word{
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 68px;
+    text-align: center;
+    font-weight: bold;
+    word-break: break-all;
+    padding: 0 25px;
+}
+
+.interactive__card--wordTranslate{
+    font-size: 16px;
+    opacity: 0.5;
+    text-align: center;
+}
+
+
+@media (max-width: 1400px){
+    .interative__card{
+        border-radius: 25px;
+    }
+}
+
+
+@media (max-width: 800px){
+    .interative__card{
+        width: 100%;
+        height: calc(100vh - 210px);
+    }
+}

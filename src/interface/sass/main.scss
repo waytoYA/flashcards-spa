@@ -11,6 +11,10 @@
 @import "./blocks/header";
 @import "./blocks/menu";
 @import "./blocks/menuEdit";
-@import "./blocks/interactive";
 @import "./blocks/results";
 @import "./blocks/buttons";
+
+@import "./blocks/interactive/intMain";
+@import "./blocks/interactive/intButtons";
+@import "./blocks/interactive/intCards";
+

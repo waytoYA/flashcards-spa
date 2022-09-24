@@ -23,9 +23,17 @@ const Interactive = ({end}: IBtnEnd) => {
 
   const next = (result: boolean) => {
 
-    setIdFC(idFC + 1)
+    // анимация
+    const card = document.getElementById(`intCard-${idFC}`)
+    card?.classList.add(result ? 'interative__card--animate--yes' : 'interative__card--animate--no')
 
-    FlashCards.setEditWordResult(idFC, result)
+    // логика
+    setTimeout(() => {
+      setIdFC(idFC + 1)
+      FlashCards.setEditWordResult(idFC, result)
+      card?.classList.remove('interative__card--animate--yes')
+      card?.classList.remove('interative__card--animate--no')
+    }, 500)
 
   }
 
@@ -46,7 +54,7 @@ const Interactive = ({end}: IBtnEnd) => {
 
         <DontKnowInteractive next={next}/>
 
-        <div className='interative__card'>
+        <div className='interative__card' id={`intCard-${idFC}`}>
             <div className='interactive__card--word'>{intWord}</div>
             <div className='interactive__card--wordTranslate'>{intWordTranslate}</div>
         </div>
