@@ -37,6 +37,54 @@ const Interactive = ({end}: IBtnEnd) => {
 
   }
 
+
+  const connectSwipe = () => {
+
+      let initialPoint: Touch;
+      let finalPoint: Touch;
+
+      const card = document.getElementById(`intCard-${idFC}`)
+
+      const getInitial = (event: any) => {
+    
+        event.stopPropagation();
+        initialPoint = event.changedTouches[0];
+    
+      }
+
+      const getFinal = (event: any) => {
+    
+        event.stopPropagation();
+        finalPoint = event.changedTouches[0];
+    
+        let xSwipe = Math.abs(initialPoint.pageX - finalPoint.pageX);
+        let ySwipe = Math.abs(initialPoint.pageY - finalPoint.pageY);
+    
+        if (xSwipe > 25 || ySwipe > 25) {
+            if (xSwipe > ySwipe) {
+    
+                if (finalPoint.pageX < initialPoint.pageX){
+                  next(false)
+                }
+                else{
+                  next(true)
+                }
+
+                // Удаляем события с карточки
+                card?.removeEventListener('touchstart', getInitial, false)
+                card?.removeEventListener('touchend', getFinal, false)
+    
+            }
+        }
+    
+      }
+
+      card?.addEventListener('touchstart', getInitial, false);
+      card?.addEventListener('touchend', getFinal, false);
+    
+      return;
+  }
+
   useEffect(() => {
     
     if (FlashCards.words.length > idFC) {
@@ -46,9 +94,9 @@ const Interactive = ({end}: IBtnEnd) => {
       end(true)
     }
 
-
+    connectSwipe()
   }, [idFC])
-  
+
   return (
       <div className='interactive'>
 

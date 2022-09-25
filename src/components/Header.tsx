@@ -6,7 +6,7 @@ const Header = () => {
     return (
       <div className='header'> 
          <div className='header__name'>
-            <a href="&">FlashCards</a>
+            <a href="/flash-cards">FlashCards</a>
          </div>
 
         <a className='github' href='https://github.com/waytoYA/flashcards-spa' target='_blank'>

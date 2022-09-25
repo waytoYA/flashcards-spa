@@ -28,3 +28,12 @@
         }
     }
 }
+
+@media (max-width: 600px){
+    .menuEdit{
+        margin: 10px 0px 0px 0px;
+    }
+    .menuEdit__AddRow{
+        width: 100%;
+    }
+}

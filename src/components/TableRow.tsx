@@ -30,6 +30,45 @@ const TableRow: FC<ICard> = ({index, id, word, wordTranslated, pos, setCheckRow}
 
     }
 
+    // Повторяется функция свайпов, в следующих
+    // обновлениях вынесу для отдельного использования
+    const deleteRowSwipe = () => {
+
+        let initialPoint: Touch;
+        let finalPoint: Touch;
+
+        const row = document.getElementById(`table__row-id-${id}`)
+
+        const getInitial = (event: any) => {
+      
+            event.stopPropagation();
+            initialPoint = event.changedTouches[0];
+        
+        }
+
+        const getFinal = (event: any) => {
+      
+            event.stopPropagation();
+            finalPoint = event.changedTouches[0];
+        
+            let xSwipe = Math.abs(initialPoint.pageX - finalPoint.pageX);
+            let ySwipe = Math.abs(initialPoint.pageY - finalPoint.pageY);
+        
+            if (xSwipe > 100 || ySwipe > 100) {
+                if (xSwipe > ySwipe) {
+        
+                    if (finalPoint.pageX < initialPoint.pageX){
+                      deleteRow(id)
+                    }
+                }
+            }
+        
+        }
+
+        row?.addEventListener('touchstart', getInitial, false);
+        row?.addEventListener('touchend', getFinal, false);
+    }
+
     useEffect (() => {
 
         FlashCards.setEditWord(
@@ -38,6 +77,9 @@ const TableRow: FC<ICard> = ({index, id, word, wordTranslated, pos, setCheckRow}
 
     }, [pos])
 
+    useEffect (() => {
+        deleteRowSwipe()
+    }, [])
     
     return (
         <div className='table__row' id={`table__row-id-${id}`}>

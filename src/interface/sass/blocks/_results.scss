@@ -15,3 +15,21 @@
 .table__row__results--yes{
     background-color: $main-green-4;
 }
+
+
+@media (max-width: 800px) {
+    .table__row__results{
+        width: 150px;
+    }
+}
+
+@media (max-width: 550px) {
+    .table__row__results{
+       font-size: 0;
+       width: 12px;
+       min-width: 12px;
+    }
+    .table__row--word--result{
+        display: none;
+    }
+}

@@ -199,6 +199,7 @@ img {
 @media (max-width: 600px) {
   .table__row--number {
     width: 10px;
+    min-width: 10px;
   }
 }
 
@@ -208,6 +209,21 @@ img {
   }
   .menu__block--title {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .table__row--delete {
+    display: none;
+  }
+}
+
+@media (max-width: 350px) {
+  .table__row--input {
+    width: 135px;
+  }
+  .table__row--word {
+    width: 135px;
   }
 }
 
@@ -255,6 +271,15 @@ img {
           transform: scale(135%);
 }
 
+@media (max-width: 600px) {
+  .menuEdit {
+    margin: 10px 0px 0px 0px;
+  }
+  .menuEdit__AddRow {
+    width: 100%;
+  }
+}
+
 .results {
   padding: 0 4%;
 }
@@ -271,6 +296,23 @@ img {
 
 .table__row__results--yes {
   background-color: rgba(122, 233, 119, 0.4);
+}
+
+@media (max-width: 800px) {
+  .table__row__results {
+    width: 150px;
+  }
+}
+
+@media (max-width: 550px) {
+  .table__row__results {
+    font-size: 0;
+    width: 12px;
+    min-width: 12px;
+  }
+  .table__row--word--result {
+    display: none;
+  }
 }
 
 .saveButton, .loadButton {
@@ -485,6 +527,21 @@ img {
   .interative__card {
     width: 100%;
     height: calc(100vh - 210px);
+  }
+}
+
+@media (max-width: 600px) {
+  .interactive__card--word {
+    font-size: 48px;
+  }
+  .interactive__card--wordTranslate {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .interactive__card--word {
+    font-size: 28px;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -30,7 +30,7 @@ const Results = () => {
                     <div className='table__row__block table__row--number'>№</div>
                     <div className='table__row__block table__row--word'>Слово</div>
                     <div className='table__row__block table__row--word'>Перевод</div>
-                    <div className='table__row__block table__row--word'>Результат</div>
+                    <div className='table__row__block table__row--word table__row--word--result'>Результат</div>
                 </div>
 
 
