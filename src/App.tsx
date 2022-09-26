@@ -22,6 +22,19 @@ const App = () => {
   // Запускаем результаты
   const [goresult, setGoresult] = useState(false)
 
+
+  // Функция перемешивания карточек
+  const mixing = () => {
+    const allWords = FlashCards.words
+
+    for (let i = allWords.length - 1; i > 0; i--){
+      let j = Math.floor(Math.random() * (i + 1));
+      [allWords[i], allWords[j]] = [allWords[j], allWords[i]];
+    }
+
+    FlashCards.setWords(allWords)
+  }
+
   const validation = () => {
     const allWords = FlashCards.words
 
@@ -46,10 +59,13 @@ const App = () => {
   useEffect(() => {
 
     if (pos === false) return;
+    
     if (!validation()) {
       setPos(false);
       return;
     };
+
+    mixing()
     setGostart(true)
 
   }, [pos])
